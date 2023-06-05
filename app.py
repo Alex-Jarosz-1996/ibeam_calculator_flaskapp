@@ -2,11 +2,11 @@
 from flask import Flask, render_template, request
 
 # Create an instance of Flask
-app = Flask(__name__)
+app: Flask = Flask(__name__)
 
 # Define a route for the home page
 @app.route('/', methods=['GET', 'POST'])
-def home():
+def home() -> str: 
     if request.method == 'POST':
         # Get the form data
         sigma = request.form['sigma']
