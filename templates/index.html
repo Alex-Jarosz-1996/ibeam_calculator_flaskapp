@@ -1,11 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Simple Flask App</title>
+    <title>I-beam Calculator Flask App Flask App</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
-    <h1>Welcome to my Flask App!</h1>
-    <p>This is a simple Flask app with HTML and CSS.</p>
+    <h1>I-beam Calculator Flask App!</h1>
+    
+    <form method="POST">
+        <label for="sigma">Sigma (N/mm^2):</label>
+        <input type="text" id="sigma" name="sigma" required><br><br>
+        
+        <label for="force_applied">Force Applied (N):</label>
+        <input type="text" id="force_applied" name="force_applied" required><br><br>
+        
+        <label for="beam_thick">Beam Thickness (mm):</label>
+        <input type="text" id="beam_thick" name="beam_thick" required><br><br>
+        
+        <label for="force_close">Distance force applied closest (m):</label>
+        <input type="text" id="force_close" name="force_close" required><br><br>
+        
+        <label for="force1"></label>
+        <input type="text" id="force1" name="force1" required><br><br>
+        
+        <label for="force2"></label>
+        <input type="text" id="force2" name="force2" required><br><br>
+        
+        <label for="force_far">Distance force applied furthest away (m):</label>
+        <input type="text" id="force_far" name="force_far" required><br><br>
+        
+        <input type="submit" value="Submit">
+    </form>
 </body>
 </html>
