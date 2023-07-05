@@ -11,7 +11,7 @@ function generateFields(num) {
     dynamicFields.empty(); // Clear previous fields
 
     for (var i = 1; i <= num; i++) {
-        var label = $('<label></label>').attr('for', 'distance' + i).text('Distance ' + i + ' (m):');
+        var label = $('<label></label>').attr('for', 'distance' + i).text('Distance ' + i + ' (mm):');
         var input = $('<input></input>').attr('type', 'text').attr('id', 'distance' + i).attr('name', 'distance' + i).attr('required', true);
         dynamicFields.append(label).append(input).append('<br><br>');
     }
