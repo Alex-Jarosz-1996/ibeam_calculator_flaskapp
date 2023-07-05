@@ -12,6 +12,13 @@ def home() -> str:
         sigma = request.form['sigma']
         force_applied = request.form['force_applied']
         beam_thick = request.form['beam_thick']
+        num_distances = int(request.form['num_distances'])
+
+        distances = []
+        for i in range(1, num_distances+1):
+            distance = request.form.get(f"distance{i}")
+            if distance:
+                distances.append(distance)
 
         # Process the form data (you can add your own logic here)
 
