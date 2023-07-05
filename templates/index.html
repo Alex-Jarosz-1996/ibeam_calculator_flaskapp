@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>I-beam Calculator Flask App Flask App</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <title>I-beam Calculator Flask App</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </head>
 <body>
     <h1>I-beam Calculator Flask App!</h1>
@@ -17,17 +19,16 @@
         <label for="beam_thick">Beam Thickness (mm):</label>
         <input type="text" id="beam_thick" name="beam_thick" required><br><br>
         
-        <label for="force_close">Distance 1 (m):</label>
-        <input type="text" id="force_close" name="force_close" required><br><br>
+        <label for="num_distances">Number of Distances:</label>
+        <select id="num_distances" name="num_distances">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select><br><br>
         
-        <label for="force1">Distance 2 (m)</label>
-        <input type="text" id="force1" name="force1" required><br><br>
-        
-        <label for="force2">Distance 3 (m)</label>
-        <input type="text" id="force2" name="force2" required><br><br>
-        
-        <label for="force_far">Distance 4 (m):</label>
-        <input type="text" id="force_far" name="force_far" required><br><br>
+        <div id="dynamic_fields"></div>
         
         <input type="submit" value="Submit">
     </form>
