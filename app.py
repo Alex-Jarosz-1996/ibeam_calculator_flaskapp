@@ -23,10 +23,10 @@ def home() -> str:
         # Process the form data (you can add your own logic here)
 
         # Render the same template again
-        return render_template('index.html')
+        return render_template('base.html')
         
     else:
-        return render_template('index.html')
+        return render_template('base.html')
 
 # Run the app
 if __name__ == '__main__':
