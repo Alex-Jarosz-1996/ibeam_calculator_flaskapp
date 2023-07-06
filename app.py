@@ -23,7 +23,7 @@ def home() -> str:
         # Process the form data (you can add your own logic here)
 
         # Render the same template again
-        return render_template('base.html')
+        return render_template('distance.html')
         
     else:
         return render_template('base.html')
