@@ -9,3 +9,20 @@ $ python app.py
 ```
 
 Enter all values as desired.
+
+## Docker
+The program can be built and ran through Docker with the following steps:
+1. Build the docker image:
+```
+$ docker build -t ibeam-flask-app .
+```
+
+2. Run the docker container:
+```
+$ docker run -p 5000:5000 flask-app
+```
+
+The program can be accessed in thr browser in the following address:
+```
+http://localhost:5000
+```
